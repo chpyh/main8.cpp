@@ -12,12 +12,12 @@ void full_field(bool field[10][10])
 }
 
 
-void full_enemy_field(char enemy_field[10][10]){
+void full_opponent_field(char opponent_field[10][10]){
     for (int i = 0; i < 10; i++)
     {
         for (int j = 0; j < 10; j++)
         {
-            enemy_field[i][j] = '-';
+            opponent_field[i][j] = '-';
         }
     }
 }
@@ -40,7 +40,7 @@ void print_field(bool field[10][10])
 
 
 // будем распечатывать для игроков успешность из ударов
-void print_enemy_field(char field[10][10])
+void print_opponent_field(char field[10][10])
 {
     for (int i = 0; i < 10; i++)
     {
@@ -203,11 +203,11 @@ void build_field(bool field[10][10])
 }
 
 // ход-выстрел
-void move(bool field[10][10], char enemyField[10][10])
+void move(bool field[10][10], char opponentField[10][10])
 {
     std::cout << " your move. Choose coordinates: " << std::endl;
 
-    print_enemy_field(enemyField); 
+    print_opponent_field(opponentField); 
     
     int y = recive_coordinate();
     int x = recive_coordinate();
@@ -216,12 +216,12 @@ void move(bool field[10][10], char enemyField[10][10])
     {
         std::cout << "You got it!" << std::endl;
         field[y][x] = false;
-        enemyField[y][x] = 'V';
+        opponentField[y][x] = 'V';
     }
     else
     {
         std::cout << "Unfortunately, you missed.  " << std::endl;
-        enemyField[y][x] = '!';
+        opponentField[y][x] = '!';
     }
 
     std::cout << std::endl;
@@ -256,8 +256,8 @@ int main()
 
     full_field(field1);
     full_field(field2);
-    full_enemy_field(enemyField1);
-    full_enemy_field(enemyField2);
+    full_opponent_field(enemyField1);
+    full_opponent_field(enemyField2);
 
     std::cout << "Hello, Player1!" << std::endl;
     build_field(field1);
