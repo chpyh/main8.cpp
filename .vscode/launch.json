@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/veronikagrigoryeva/Documents/C++/ДЗ/ДЗ-13/main8.cpp",
+      "program": "/Users/veronikagrigoryeva/Documents/C++/ДЗ/ДЗ-13/main8.cpp/build/Debug/outDebug"
+    }
+  ]
+}
