@@ -186,19 +186,19 @@ void build_field(bool field[10][10])
 
     std::cout << "At first put 1-cell ships." << std::endl;
     put_same_ships(field, 4, 1);
-    print_field(field);
+    show_field(field);
 
     std::cout << "Good! It's time to choose a place for 2-cell ships." << std::endl;
     put_same_ships(field, 3, 2);
-    print_field(field);
+    show_field(field);
 
     std::cout << "Genious! Now put 3-cell ships on the field." << std::endl;
     put_same_ships(field, 2, 3);
-    print_field(field);
+    show_field(field);
 
     std::cout << "Perfect! And finally put 4-cell ship on the field." << std::endl;
     put_same_ships(field, 1, 4);
-    print_field(field);
+    show_field(field);
 
     std::cout << "Congratulations! Now you can start the game!" << std::endl;
     std::cout << std::endl;
